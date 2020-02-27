@@ -1,0 +1,65 @@
+Function: main/0
+Constants: None, "Enter a number: ", "Value is not an integer!", 1, 2, 0
+Locals: num, numlist, i
+Globals: int, input, ValueError, print, range, append
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_GLOBAL                    1
+          LOAD_CONST                     1
+          CALL_FUNCTION                  1
+          CALL_FUNCTION                  1
+          STORE_FAST                     0
+          BUILD_LIST                     0
+          STORE_FAST                     1
+          SETUP_EXCEPT             label00
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          CALL_FUNCTION                  1
+          STORE_FAST                     0
+          POP_BLOCK                
+          JUMP_FORWARD             label02
+label00:  DUP_TOP                  
+          LOAD_GLOBAL                    2
+          COMPARE_OP                    10
+          POP_JUMP_IF_FALSE        label01
+          POP_TOP                  
+          POP_TOP                  
+          POP_TOP                  
+          LOAD_GLOBAL                    3
+          LOAD_CONST                     2
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          POP_EXCEPT               
+          JUMP_FORWARD             label06
+label01:  END_FINALLY              
+label02:  SETUP_LOOP               label05
+          LOAD_GLOBAL                    4
+          LOAD_FAST                      0
+          LOAD_CONST                     3
+          BINARY_ADD               
+          CALL_FUNCTION                  1
+          GET_ITER                 
+label03:  FOR_ITER                 label04
+          STORE_FAST                     2
+          LOAD_FAST                      2
+          LOAD_CONST                     4
+          BINARY_MODULO            
+          LOAD_CONST                     5
+          COMPARE_OP                     2
+          POP_JUMP_IF_FALSE        label03
+          LOAD_FAST                      1
+          LOAD_ATTR                      5
+          LOAD_FAST                      2
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          JUMP_ABSOLUTE            label03
+          JUMP_ABSOLUTE            label03
+label04:  POP_BLOCK                
+label05:  LOAD_GLOBAL                    3
+          LOAD_FAST                      1
+          CALL_FUNCTION                  1
+          POP_TOP                  
+label06:  LOAD_CONST                     0
+          RETURN_VALUE             
+END
+

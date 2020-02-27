@@ -1,0 +1,16 @@
+Function: main/0
+Constants: None, "Hello there!", "Sample Code"
+Globals: print
+BEGIN
+          LOAD_GLOBAL                    0 - print
+          LOAD_CONST                     1 - "Hello There!"
+          CALL_FUNCTION                  1 
+          POP_TOP                  
+          LOAD_GLOBAL                    0 - print
+          LOAD_CONST                     2 - "Sample Code"
+          CALL_FUNCTION                  1 - main
+          POP_TOP                  	
+          LOAD_CONST                     0 - None
+          RETURN_VALUE             
+END
+
